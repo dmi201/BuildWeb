@@ -1,0 +1,87 @@
+<header></header>
+<nav role="navigation" aria-label="Main navigation">
+  <div id="desktop-nav">
+    <div class="logo"><a routerLink="/" class="logo">BuildWeb</a></div>
+    <div class="nav-links">
+      <ul>
+        <li><a routerLink="/acasa" routerLinkActive="active">Acasă</a></li>
+        <li>
+          <a routerLink="/despre-noi" routerLinkActive="active">Despre Noi</a>
+        </li>
+        <li>
+          <a routerLink="/servicii" routerLinkActive="active">Servicii</a>
+        </li>
+        <li>
+          <a routerLink="/portofoliu" routerLinkActive="active">Portofoliu</a>
+        </li>
+        <li><a routerLink="/blog" routerLinkActive="active">Blog</a></li>
+        <li>
+          <a routerLink="/contact" routerLinkActive="active">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="hamburger-nav">
+    <div class="logo"><a routerLink="/" class="logo">BuildWeb</a></div>
+    <div class="hamburger-menu">
+      <div
+        class="hamburger-icon"
+        [class.open]="isMenuOpen"
+        (click)="toggleMenu()"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="menul-links" [class.open]="isMenuOpen" *ngIf="isMenuOpen">
+      <ul>
+        <li>
+          <a
+            routerLink="/acasa"
+            routerLinkActive="active"
+            (click)="toggleMenu()"
+            >Acasă</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/despre-noi"
+            routerLinkActive="active"
+            (click)="toggleMenu()"
+            >Despre Noi</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/servicii"
+            routerLinkActive="active"
+            (click)="toggleMenu()"
+            >Servicii</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/portofoliu"
+            routerLinkActive="active"
+            (click)="toggleMenu()"
+            >Portofoliu</a
+          >
+        </li>
+        <li>
+          <a routerLink="/blog" routerLinkActive="active" (click)="toggleMenu()"
+            >Blog</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/contact"
+            routerLinkActive="active"
+            (click)="toggleMenu()"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
